@@ -1,15 +1,24 @@
-> Diving into Node.js github repo
+# Diving into the Node.js GitHub Repository
 
-- Every module behind the scene wraps inside one function thats why without export you can access the variables
+- Every module, behind the scenes, is wrapped inside a function.\
+  That's why even without exporting, variables remain scoped to the
+  module.
 
--// require("./path")
+- Example usage of `require`:
 
-- the function which gets created is a function(IIFE)
-- IIFE Immediately Invoked Function Expression.
-- Function gets invoked as soon as it is created
+  ```js
+  // require("./path")
+  ```
 
+- The function that Node.js creates for each module is an **IIFE**
+  (Immediately Invoked Function Expression).
+
+- **IIFE**: A function that gets invoked as soon as it is created.
+
+### This is how Node.js internally wraps a module:
+
+```js
 (function () {
-
-// All code of the module gets here
-
+  // All code of the module goes here
 })();
+```
