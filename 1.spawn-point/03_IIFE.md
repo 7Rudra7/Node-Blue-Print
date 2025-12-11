@@ -30,7 +30,7 @@
 
 `module` and `require` are provided by Node. They are parameters passed into the IIFE wrapper function.
 
-![My Diagram](../Assets/IIFEtoV8.png)
+![My Diagram](../Assets/IIFEtov8.png)
 
 ---
 
