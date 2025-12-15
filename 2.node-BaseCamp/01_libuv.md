@@ -6,7 +6,7 @@
 
 - JS doesn’t know how to wait
 
-> **libuv**
+  > **libuv**
 
 > libuv is async I/O made simple.
 
@@ -17,3 +17,5 @@
 ```
 V8  →  libuv  →  OS (File, WWW, DB, Timer)
 ```
+
+![My Diagram](../Assets/libuv.png)
