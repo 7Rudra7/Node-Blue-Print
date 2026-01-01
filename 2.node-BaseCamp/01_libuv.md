@@ -19,3 +19,7 @@ V8  →  libuv  →  OS (File, WWW, DB, Timer)
 ```
 
 ![My Diagram](../Assets/libuv.png)
+
+-Node JS is Async I/O (Non Blocking I/O using V8 engine)
+
+![My Diagram](../Assets/libuvwithv8.png)
