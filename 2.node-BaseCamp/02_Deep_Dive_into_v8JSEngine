@@ -1,0 +1,69 @@
+# V8 JS Engine
+
+## V8 Architecture
+
+### Step 1: Parsing
+
+![My Diagram](../Assets/parsing.png)
+
+- Source code is parsed and converted into an **AST (Abstract Syntax Tree)**
+- You can visualize ASTs using:
+  👉 https://astexplorer.net
+
+---
+
+### V8 Execution Model
+
+- V8 uses **both an Interpreter and a Compiler**
+- It follows **JIT (Just-In-Time) Compilation**
+
+---
+
+### Step 2: Interpreter
+
+![My Diagram](../Assets/Interpreter.png)
+
+- The AST is passed to the **Ignition Interpreter**
+- Ignition converts AST into **Bytecode**
+- Bytecode is then executed
+
+---
+
+### Optimization with TurboFan
+
+- Ignition keeps monitoring the running code
+- Frequently executed code is marked as **"HOT"**
+- HOT code is sent to the **TurboFan Compiler**
+- TurboFan generates **optimized machine code**
+
+#### Example
+
+```js
+sum(1, 5);
+sum(4, 6);
+sum(4, 4);
+```
+
+- Since `sum` is repeatedly called with integers, V8 optimizes it
+- If later a different type is passed (e.g. a string), V8 **de-optimizes** the code
+
+```js
+sum("1", 5); // causes de-optimization
+```
+
+---
+
+### Just-In-Time (JIT) Compilation
+
+- This behavior of:
+  - Interpreting first
+  - Optimizing hot code
+  - De-optimizing when assumptions break
+- Is called **Just-In-Time (JIT) Compilation**
+
+---
+
+### Concepts to Explore
+
+- **Inline Caching**
+- **Copy Elision**
