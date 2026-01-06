@@ -4,7 +4,7 @@
 
 ### Step 1: Parsing
 
-![My Diagram](../Assets/parsing.png)
+![Parsing](../Assets/parsing.png)
 
 - Source code is parsed and converted into an **AST (Abstract Syntax Tree)**
 - You can visualize ASTs using:
@@ -21,7 +21,7 @@
 
 ### Step 2: Interpreter
 
-![My Diagram](../Assets/Interpreter.png)
+![Interpreter](../Assets/Interpreter.png)
 
 - The AST is passed to the **Ignition Interpreter**
 - Ignition converts AST into **Bytecode**
